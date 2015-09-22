@@ -40,7 +40,7 @@ namespace Rogero.Option
 
         public T Value { get; private set; }
         public bool HasValue => this != None;
-        public bool IsNone => this == None;
+        public bool HasNoValue => this == None;
 
         public static readonly Option<T> None = new Option<T>(default(T));
 
