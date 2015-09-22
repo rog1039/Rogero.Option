@@ -7,6 +7,13 @@ namespace Rogero.Option
 {
     public static class OptionExtensions
     {
+        public static Option<T> ToOption<T>(this T o) where T : class
+        {
+            return o == null
+                ? Option<T>.None
+                : Option<T>.Some(o);
+        } 
+
         public static Option<T> DoIfValue<T>(this Option<T> source, Action<T> action)
         {
             if (source.HasValue)
