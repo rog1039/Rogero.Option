@@ -39,7 +39,8 @@ namespace Rogero.Option
         #endregion
 
         public T Value { get; private set; }
-        public bool HasValue { get { return this != None; } }
+        public bool HasValue => this != None;
+        public bool IsNone => this == None;
 
         public static readonly Option<T> None = new Option<T>(default(T));
 
