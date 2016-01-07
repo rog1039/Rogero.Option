@@ -25,10 +25,10 @@ namespace Rogero.Option.Tests
         public void NotNullToSome()
         {
             object o = new object();
-            var nullOption = o.ToOption();
-            Assert.True(nullOption.HasValue == true);
-            Assert.True(nullOption == o);
-            Assert.True(o == nullOption);
+            var notNullOption = o.ToOption();
+            Assert.True(notNullOption.HasValue == true);
+            Assert.True(notNullOption == o);
+            Assert.True(o == notNullOption);
         }
     }
 
