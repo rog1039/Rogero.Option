@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rogero.Option", "Rogero.Option\Rogero.Option.csproj", "{EE70A7E2-F266-43A2-BCC4-709351BF740D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rogero.Option.Tests", "Rogero.Option.Tests\Rogero.Option.Tests.csproj", "{FE3538CC-6D6A-4D31-9E29-3829D9701EEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rogero.Option", "Rogero.Option\Rogero.Option.csproj", "{AD468EE2-B34A-4D4D-8F8D-72DF88F12DB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE70A7E2-F266-43A2-BCC4-709351BF740D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE70A7E2-F266-43A2-BCC4-709351BF740D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE70A7E2-F266-43A2-BCC4-709351BF740D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE70A7E2-F266-43A2-BCC4-709351BF740D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE3538CC-6D6A-4D31-9E29-3829D9701EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FE3538CC-6D6A-4D31-9E29-3829D9701EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE3538CC-6D6A-4D31-9E29-3829D9701EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE3538CC-6D6A-4D31-9E29-3829D9701EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD468EE2-B34A-4D4D-8F8D-72DF88F12DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD468EE2-B34A-4D4D-8F8D-72DF88F12DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD468EE2-B34A-4D4D-8F8D-72DF88F12DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD468EE2-B34A-4D4D-8F8D-72DF88F12DB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

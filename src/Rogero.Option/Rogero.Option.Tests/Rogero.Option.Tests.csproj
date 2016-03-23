@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rogero.Option\Rogero.Option.csproj">
-      <Project>{ee70a7e2-f266-43a2-bcc4-709351bf740d}</Project>
+      <Project>{ad468ee2-b34a-4d4d-8f8d-72df88f12db2}</Project>
       <Name>Rogero.Option</Name>
     </ProjectReference>
   </ItemGroup>
