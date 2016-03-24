@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rogero.Option
+namespace Rogero.Options
 {
     public static class OptionExtensions
     {

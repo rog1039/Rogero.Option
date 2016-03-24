@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Rogero.Option.Tests
+namespace Rogero.Options.Tests
 {
     public class ToOptionTests
     {

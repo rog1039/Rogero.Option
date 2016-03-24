@@ -8,7 +8,7 @@
     <ProjectGuid>{AD468EE2-B34A-4D4D-8F8D-72DF88F12DB2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rogero.Option</RootNamespace>
+    <RootNamespace>Rogero.Options</RootNamespace>
     <AssemblyName>Rogero.Option</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>

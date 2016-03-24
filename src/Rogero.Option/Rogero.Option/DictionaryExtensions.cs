@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Rogero.Option
+namespace Rogero.Options
 {
     public static class DictionaryExtensions
     {

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Rogero.Option
+namespace Rogero.Options
 {
     public class Option<T> : IEnumerable<T>
     {
