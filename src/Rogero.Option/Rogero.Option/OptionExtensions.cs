@@ -38,5 +38,19 @@ namespace Rogero.Options
             else
                 none.Invoke();
         }
+
+        /// <summary>
+        /// Returns the value if the Option contains one, otherwise, returns the provided value.
+        /// </summary>
+        /// <typeparam name="T">g</typeparam>
+        /// <param name="option"></param>
+        /// <param name="otherValue">The value to return if the Option does not have a value.</param>
+        /// <returns></returns>
+        public static T ToValueOr<T>(this Option<T> option, T otherValue)
+        {
+            return option.HasValue
+                ? option.Value
+                : otherValue;
+        }
     }
 }
