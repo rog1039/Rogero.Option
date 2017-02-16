@@ -59,4 +59,33 @@ namespace Rogero.Options.Tests
             Assert.True(option1 == option2);
         }
     }
+
+    public class OptionTrySelectTests
+    {
+        [Fact()]
+        [Trait("Category", "Instant")]
+        public void SimpleNonNullList()
+        {
+            var list = new List<string>() {"1", "2"};
+            var optionList = list.ToOption();
+            var intList = optionList.TrySelect(int.Parse);
+
+            var total = intList.Value.Sum(z => z);
+            Assert.True(total == 3);
+        }
+
+        [Fact()]
+        [Trait("Category", "Instant")]
+        public void SimpleNullList()
+        {
+            List<string> list = null;
+            var optionList = list.ToOption();
+            var intList = optionList.TrySelect(int.Parse);
+
+            Assert.True(intList.HasNoValue);
+
+            var set = new HashSet<int>();
+            
+        }
+    }
 }
