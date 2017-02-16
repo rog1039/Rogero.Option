@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,13 @@ namespace Rogero.Options
             return option.HasValue
                 ? option.Value
                 : otherValue;
+        }
+
+        public static Option<IEnumerable<TResult>> TrySelect<T, TResult>(this Option<IEnumerable<T>> optionList, Func<T, TResult> func)
+        {
+            if (optionList.HasValue)
+                return optionList.Value.Select(func).ToOption();
+            return Option<IEnumerable<TResult>>.None;
         }
     }
 }
