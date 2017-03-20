@@ -13,7 +13,14 @@ namespace Rogero.Options
             return o == null
                 ? Option<T>.None
                 : Option<T>.Some(o);
-        } 
+        }
+
+        public static T? ToNullable<T>(this Option<T> o) where T : struct
+        {
+            return o.HasValue
+                ? o.Value
+                : (T?) null;
+        }
 
         public static Option<T> DoIfValue<T>(this Option<T> source, Action<T> action)
         {
