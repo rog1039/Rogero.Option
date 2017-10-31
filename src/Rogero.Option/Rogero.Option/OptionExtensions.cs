@@ -81,5 +81,18 @@ namespace Rogero.Options
                 return optionList.Value.Select(func).ToOption();
             return Option<IEnumerable<TResult>>.None;
         }
+
+        public static Option<TResult> SelectToOption<T, TResult>(this Option<T> option, Func<Option<T>, Option<TResult>> func)
+        {
+            if(option.HasValue)
+            {
+                var result = func(option);
+                return result;
+            }
+            else
+            {
+                return Option<TResult>.None;
+            }
+        }
     }
 }
