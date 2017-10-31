@@ -94,5 +94,23 @@ namespace Rogero.Options
                 return Option<TResult>.None;
             }
         }
+
+        public static Option<T> Flatten<T>(this Option<Option<T>> option)
+        {
+            if(option.HasValue)
+                return option.Value;
+            else
+                return Option<T>.None;
+        }
+
+        public static Option<T> Flatten<T>(this Option<Option<Option<T>>> option)
+        {
+            if(option.HasValue)
+            {
+                return option.Value.Flatten();
+            }
+            else
+                return Option<T>.None;
+        }
     }
 }
