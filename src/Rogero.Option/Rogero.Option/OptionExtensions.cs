@@ -61,6 +61,16 @@ namespace Rogero.Options
                 : otherValue;
         }
 
+        public static Option<TResult> TrySelect<T, TResult>(this Option<T> option, Func<T, TResult> transform)
+        {
+            if (option.HasValue)
+            {
+                return transform(option.Value);
+            }
+
+            return Option<TResult>.None;
+        }
+
         public static Option<IEnumerable<TResult>> TrySelect<T, TResult>(this Option<List<T>> optionList, Func<T, TResult> func)
         {
             if (optionList.HasValue)

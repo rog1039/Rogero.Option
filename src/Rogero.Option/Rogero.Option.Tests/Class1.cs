@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shouldly;
 using Xunit;
 
 namespace Rogero.Options.Tests
@@ -62,6 +63,33 @@ namespace Rogero.Options.Tests
 
     public class OptionTrySelectTests
     {
+        private class TestClass
+        {
+            public string Name { get; set; }
+        }
+        
+        [Fact()]
+        [Trait("Category", "Instant")]
+        public void SimpleHasValue()
+        {
+            var sut = new TestClass() {Name = "John"};
+            var result = sut.ToOption().TrySelect(z => z.Name);
+
+            result.HasValue.ShouldBeTrue();
+            result.Value.ShouldBe("John");
+        }
+        
+        [Fact()]
+        [Trait("Category", "Instant")]
+        public void SimpleHasNoValue()
+        {
+            Option<TestClass> sut = Option<TestClass>.None;
+            var result = sut.TrySelect(z => z.Name);
+
+            result.HasValue.ShouldBeFalse();
+            result.HasNoValue.ShouldBeTrue();
+        }
+
         [Fact()]
         [Trait("Category", "Instant")]
         public void SimpleNonNullList()
@@ -85,7 +113,6 @@ namespace Rogero.Options.Tests
             Assert.True(intList.HasNoValue);
 
             var set = new HashSet<int>();
-            
         }
     }
 }
