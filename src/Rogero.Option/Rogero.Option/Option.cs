@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Rogero.Options
 {
-    public class Option<T> : IEnumerable<T>
+    public class Option<T>
     {
         #region Equals Implementation
 
@@ -48,21 +49,11 @@ namespace Rogero.Options
         {
             return new Option<T>(value);
         }
-
+        
+        [JsonConstructor]
         private Option(T value)
         {
             Value = value;
-        }
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            if (HasValue)
-                yield return Value;
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
         }
         
         public static implicit operator Option<T>(T obj)
